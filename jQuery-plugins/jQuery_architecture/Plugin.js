@@ -1,3 +1,6 @@
+﻿
+/**类似jQuery 体系建立
+ * Plugin、jQuery are Function，Plugin(..)、jQuery(..) are Object
  * @constructor:    Plugin() = Plugin.prototype.init()
  * @constructor:   jQuery() = jQuery.fn.init()
  */
@@ -6,7 +9,9 @@
         console.info("welcome to Plugin!")
         return new Plugin.fn.init(selector,context);
     };
+    //定义标记符号
     context.$$ = context.Plugin;
+    //初始化Plugin prototype
     Plugin.fn = Plugin.prototype = {
         copyright:"vincent,201707",
         version:"0.1.1",
