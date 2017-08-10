@@ -1,5 +1,5 @@
 /**
- * Created by liwei on 2017/8/3 0003.
+ * Created by vincent on 2017/8/3 0003.
  */
 
 (function(context,methods){
