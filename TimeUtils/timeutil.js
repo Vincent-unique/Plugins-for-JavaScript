@@ -93,9 +93,9 @@
           if(!date){
               date = this.currentDate;
           }
-            if(!seperator){
-                seperator = "-";
-            }
+          if(!seperator){
+              seperator = "-";
+          }
           if(this.getMonth(date)==1){
               return (this.getYear(date)-1)+seperator+"12"+seperator+this.getDay(date)+" "+this.buildHMS(date);
           }else {
@@ -127,6 +127,19 @@
                 date = this.currentDate;
             }
             return new Date(new Date(date).getTime()-1000*60*60*24);
+        },
+
+        /**
+         * Get the first day of certain month 
+         * @param date
+         * @returns {Date}
+         */
+        firstDayOfTheMonth:function (date) {
+            if(!date){
+                date = this.currentDate;
+            }
+            // return new Date(this.getYear(date),this.getMonth(date),1);
+            return new Date((new Date(date).getTime()- (this.getDay(date)-1)*24*60*60*1000));
         }
     }
 }));
