@@ -53,9 +53,6 @@
             * Initilize for all components
             */
            componets(cxt);
-           cxt.register = function(name,componet){
-               cxt[name] = componet;
-           };
        }
     )(context);
 })(window||this||self||global,function (cxt) {
