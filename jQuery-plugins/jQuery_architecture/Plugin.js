@@ -28,7 +28,8 @@
     Plugin.fn.extend = function () {
         if(arguments.length>1){
             for(var i=1;i<=arguments.length;i++) {
-                $.extend(arguments[0], arguments[i])
+                // $.extend(arguments[0], arguments[i])
+                Object.assign(arguments[0],arguments[i]);
             }
             return arguments[0];
         }else{
